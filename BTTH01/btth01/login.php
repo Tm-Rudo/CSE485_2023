@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -53,6 +54,13 @@
                     </div>
                     <div class="card-body">
                         <form action="process_login.php" method="post">
+                            <?php
+                                if(isset($_GET['error'])){
+                                ?>
+                                <span style="color: red;">
+                                    <?php echo $_GET['error'] ?>    
+                                </span>
+                            <?php } ?>  
                             <div class="input-group mb-3">
                                 <span class="input-group-text" ><i class="fas fa-user"></i></span>
                                 <input type="text" class="form-control" placeholder="username"name="txtUser" >

@@ -78,7 +78,7 @@
                                     <td><?= $each['ten_tgia'] ?></td>
                                     <td><?= $each['ngayviet'] ?></td>
                                     <td>
-                                    <img height="100" src="../images/songs/<?php echo $each['hinhanh'] ?>" alt="">
+                                    <img height="100" src="../images/songs/<?php echo $each['hinhanh'] ?>" >
                                     </td>
                                     <td>
                                         <a href="edit_article.php?id=<?=$each['ma_bviet']?>"><i class="fa-solid fa-pen-to-square"></i></a>

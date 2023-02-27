@@ -43,6 +43,25 @@
 
     </header>
     <main class="container mt-5 mb-5">
+        <?php
+            require('../includes/connect.php');
+            $sql = 'select count(*) from baiviet ;';
+            $statement = $conn->query($sql);
+            $article = $statement->fetch();
+            
+            $sql = 'select count(*) from nguoidung ;';
+            $statement = $conn->query($sql);
+            $user = $statement->fetch();
+
+            $sql = 'select count(*) from theloai ;';
+            $statement = $conn->query($sql);
+            $category = $statement->fetch();
+
+            $sql = 'select count(*) from tacgia ;';
+            $statement = $conn->query($sql);
+            $author = $statement->fetch();
+            
+        ?>
         <!-- <h3 class="text-center text-uppercase mb-3 text-primary">CẢM NHẬN VỀ BÀI HÁT</h3> -->
         <div class="row">
             <div class="col-sm-3">
@@ -53,7 +72,7 @@
                         </h5>
 
                         <h5 class="h1 text-center">
-                            110
+                            <?= $user[0] ?>
                         </h5>
                     </div>
                 </div>
@@ -63,11 +82,11 @@
                 <div class="card mb-2" style="width: 100%;">
                     <div class="card-body">
                         <h5 class="card-title text-center">
-                            <a href="" class="text-decoration-none">Thể loại</a>
+                            <a href="category.php" class="text-decoration-none">Thể loại</a>
                         </h5>
 
                         <h5 class="h1 text-center">
-                            10
+                            <?= $category[0] ?>
                         </h5>
                     </div>
                 </div>
@@ -77,11 +96,11 @@
                 <div class="card mb-2" style="width: 100%;">
                     <div class="card-body">
                         <h5 class="card-title text-center">
-                            <a href="" class="text-decoration-none">Tác giả</a>
+                            <a href="author.php" class="text-decoration-none">Tác giả</a>
                         </h5>
 
                         <h5 class="h1 text-center">
-                            20
+                            <?= $author[0] ?>
                         </h5>
                     </div>
                 </div>
@@ -91,11 +110,11 @@
                 <div class="card mb-2" style="width: 100%;">
                     <div class="card-body">
                         <h5 class="card-title text-center">
-                            <a href="" class="text-decoration-none">Bài viết</a>
+                            <a href="article.php" class="text-decoration-none">Bài viết</a>
                         </h5>
 
                         <h5 class="h1 text-center">
-                            110
+                            <?= $article[0] ?>
                         </h5>
                     </div>
                 </div>
