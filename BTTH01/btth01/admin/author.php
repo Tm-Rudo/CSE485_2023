@@ -53,6 +53,7 @@
                         <tr>
                             <th scope="col">#</th>
                             <th scope="col">Tên tác giả</th>
+                            <th scope="col">Hình tác giả</th>
                             <th>Sửa</th>
                             <th>Xóa</th>
                         </tr>
@@ -67,6 +68,9 @@
                 <tr>
                     <th scope="row"><?= $each['ma_tgia'] ?></th>
                     <td><?= $each['ten_tgia'] ?></td>
+                    <td>
+                        <img height="100" src="../images/songs/<?php echo $each['hinh_tgia'] ?>" alt="">
+                    </td>
                     <td>
                         <a href="edit_author.php?id=<?php echo $each['ma_tgia']?>"><i class="fa-solid fa-pen-to-square"></i></a>
                     </td>
