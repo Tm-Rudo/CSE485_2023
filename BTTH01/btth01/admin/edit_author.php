@@ -47,7 +47,7 @@
         <div class="row">
             <div class="col-sm">
                 <h3 class="text-center text-uppercase fw-bold">Sửa thông tin tác giả</h3>
-                <form action="process_edit_author.php" method="post" enctype="multipart/form-data>
+                <form action="process_edit_author.php" method="post" enctype="multipart/form-data">
                 <?php
                             $id = $_GET['id'];
                             require('../includes/connect.php');
