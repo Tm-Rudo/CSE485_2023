@@ -47,11 +47,11 @@
         <div class="row">
             <div class="col-sm">
                 <h3 class="text-center text-uppercase fw-bold">Sửa thông tin tác giả</h3>
-                <form action="process_edit_author.php" method="post">
+                <form action="process_edit_author.php" method="post" enctype="multipart/form-data>
                 <?php
                             $id = $_GET['id'];
                             require('../includes/connect.php');
-                            $sql = "select ma_tgia, ten_tgia from tacgia where ma_tgia = '$id'";
+                            $sql = "select ma_tgia, ten_tgia, hinh_tgia from tacgia where ma_tgia = '$id'";
                             $statement = $conn->query($sql);
 
                             $author = $statement ->fetch();
@@ -67,10 +67,10 @@
                         <input type="text" class="form-control" name="txtAutName"  value="<?php echo $author['ten_tgia']; ?>">
                     </div>
 
-                    <!-- <div class="input-group mt-3 mb-3">
-                        <span class="input-group-text" id="lblCatName">Hình ảnh tác giả</span>
-                        <input type="text" class="form-control" name="txtCatName" value = "">
-                    </div> -->
+                    <div class="input-group mt-3 mb-3">
+                        <span class="input-group-text" id="Image">Hình ảnh tác giả</span>
+                            <input type="file" name="Image">
+                    </div>
 
                     <div class="form-group  float-end ">
                         <input type="submit" value="Lưu lại" class="btn btn-success">

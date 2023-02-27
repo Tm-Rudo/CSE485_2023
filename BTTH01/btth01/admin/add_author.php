@@ -58,10 +58,10 @@
                         <input type="text" class="form-control" name="txtAutName" >
                     </div>
 
-                    <!-- <div class="input-group mt-3 mb-3">
+                    <div class="input-group mt-3 mb-3">
                         <span class="input-group-text" id="imgAut">Hình ảnh tác giả</span>
-                            <input type="file" name="image">
-                    </div> -->
+                            <input type="file" name="Image">
+                    </div>
 
                     <div class="form-group  float-end ">
                         <input type="submit" value="Thêm" class="btn btn-success">
